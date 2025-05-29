@@ -1597,10 +1597,12 @@ def detect_ai_content(content, content_type):
                   Let's turn your ideas into reality with cutting-edge technology and innovative solutions.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <a href="mailto:haldar.apratim005@gmail.com">
                   <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-black font-bold px-8 py-4 rounded-full text-lg hover:scale-105 transition-all duration-300">
                     <Mail className="h-5 w-5 mr-2" />
                     Get In Touch
                   </Button>
+                  </a>
                   <a href="https://drive.google.com/file/d/1H--z9HfD0Z4cgl2lcOw5lKtNWwTmgHuS/view?usp=sharing" target="_blank" rel="noopener noreferrer"
                   download>
                   <Button
