@@ -123,13 +123,13 @@ export default function Portfolio() {
       id: 2,
       year: "2023",
       title: "First Breakthrough",
-      subtitle: "Deep Dive into AI/ML",
+      subtitle: "Deep Dive into MERN Stack",
       description:
-        "Developed expertise in machine learning and computer vision, starting my first major projects in AI.",
+        "Developed expertise in full-stack web development using MongoDB, Express.js, React, and Node.js, building my first major web applications.",
       type: "skill",
-      icon: Brain,
+      icon: Code2,
       color: "purple",
-      achievements: ["Mastered Python & ML libraries", "Built first AI models", "Started computer vision research"],
+      achievements: ["Mastered MERN stack development", "Built first full-stack applications", "Started modern web development journey"],
       location: "Remote Learning",
     },
     {
