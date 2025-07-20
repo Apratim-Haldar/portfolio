@@ -207,6 +207,42 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
+      name: "Nifti Clothing",
+      type: "Full-Stack E-commerce",
+      status: "Production",
+      description:
+        "A complete e-commerce solution for Nifti Clothing store featuring comprehensive admin panel, product management, category system, newsletter integration, and automated email services. Includes order management, user authentication, and mass email marketing capabilities.",
+      achievement: "💼 Freelance Client Project",
+      icon: Globe,
+      color: "from-green-500 to-emerald-500",
+      tech: ["React", "Node.js", "MongoDB", "Express", "Nodemailer", "Stripe"],
+      metrics: { features: "Complete", admin: "Full Panel", emails: "Automated" },
+      links: {
+        live: "https://www.nifti.in",
+        source: "https://github.com/Apratim-Haldar/Nifti-Clothing"
+      },
+      codeSnippet: `// Admin product management
+const createProduct = async (productData) => {
+  const product = new Product({
+    ...productData,
+    category: await Category.findById(productData.categoryId),
+    createdBy: req.user.id
+  });
+  
+  await product.save();
+  
+  // Send newsletter to subscribers
+  await sendNewsletterUpdate({
+    subject: 'New Product Added!',
+    product: product,
+    subscribers: await Newsletter.find({ active: true })
+  });
+  
+  return product;
+};`,
+    },
+    {
+      id: 2,
       name: "Heartify",
       type: "Health Monitoring",
       status: "Production",
@@ -242,7 +278,7 @@ socket.on('vitals_update', (data) => {
 });`,
     },
     {
-      id: 2,
+      id: 3,
       name: "HireSight",
       type: "HR Automation",
       status: "Alpha",
@@ -270,7 +306,7 @@ async function matchCandidates(jobDescription, candidates) {
 }`,
     },
     {
-      id: 3,
+      id: 4,
       name: "Agnarok",
       type: "AI Agent Builder",
       status: "Alpha",
@@ -296,7 +332,7 @@ const createAgent = async (prompt, tools) => {
 };`,
     },
     {
-      id: 4,
+      id: 5,
       name: "DeepTruth",
       type: "AI Content Detection",
       status: "Alpha",
@@ -342,7 +378,7 @@ def detect_ai_content(content, content_type):
       color: "cyan",
       description:
         "Advanced proficiency in React.js, TypeScript, Next.js, and related technologies for building complex, interactive web applications.",
-      projects: ["Agnarok", "HireSight", "Heartify"],
+      projects: ["Nifti Clothing", "Agnarok", "HireSight", "Heartify"],
       level: 95,
     },
     {
@@ -375,7 +411,7 @@ def detect_ai_content(content, content_type):
       color: "amber",
       description:
         "Designing scalable, resilient systems with microservices, API integration, and cloud infrastructure.",
-      projects: ["Agnarok", "HireSight"],
+      projects: ["Nifti Clothing", "Agnarok", "HireSight"],
       level: 85,
     },
   ]
